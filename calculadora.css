@@ -1,0 +1,29 @@
+#marco{
+	margin:auto;
+	width: 150px;
+	height: 270px;
+	border: 5px solid silver;
+	border-radius: 12px 10px 20px 10px ;
+
+}
+#uno,#dos,#tres,#cuatro,#cinco,#seis,#siete,#ocho,#nueve,#mas,#menos,#por,#dividido,#igual,#cero{
+	width: 30px;
+	height: 40px;
+	border: 3px solid pink;
+	border-radius: 2px 3px 4px 2px;
+	border-bottom: 10px solid #darkred;
+	color: blue;
+}
+#uno:hover,#dos:hover,#tres:hover,#cuatro:hover,#cinco:hover,#seis:hover,#siete:hover,#ocho:hover,#nueve:hover,#mas:hover,#resta:hover,#por:hover,#divisor:hover,#igual:hover{
+	font-size: 10px;
+	border-radius: 2px 3px 5px 2px;
+	box-shadow: 10px 15px 10px 20px solid blue;
+	border-bottom: 3px 4px 2px 3px solid blanchedalmond;
+
+}
+#t{
+	width: 130px;
+}
+#diseño{
+	font-family: Bradley Hand ITC, sans-serif;
+}

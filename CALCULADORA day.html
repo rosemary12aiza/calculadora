@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="C:\PRACTICA NINFA  DAICY ARCIBIA\calculadora.css">
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title></title>
+<img src="images.jpg">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		JAVA SCRIPT
+	</title>
+</head>
+<body>
+<body background="FONDO.JPG">
+<center>
+<form method="get" action="" name="f1" id="f1">
+<input type="text" name="txt1" id="txt1">	
+ <div id="marco">
+    <center>
+    <td><center><h3 id="diseño"> CASSIO CALCULADORA </h3></center>
+  </center>
+<br>
+<br>
+ <input type="button" value="1" id="uno" onclick="numero('1');">
+    <input type="button" value="2" id="dos" onclick="numero('2');">
+    <input type="button" value="3" id="tres" onclick="numero('3');"><br><br>
+    <input type="button" value="4" id="cuatro" onclick="numero('4');">
+    <input type="button" value="5" id="cinco" onclick="numero('5');">
+    <input type="button" value="6" id="seis" onclick="numero('6');"><br><br>
+    <input type="button" value="7" id="siete" onclick="numero('7');">
+    <input type="button" value="8" id="ocho" onclick="numero('8');">
+    <input type="button" value="9" id="nueve" onclick="numero('9');"><br><br>
+    <input type="button" value="0" id="cero" onclick="numero('0');">
+    <input type="button" value="+" id="mas" onclick="operador('+');">
+    <input type="button" value="-" id="menos" onclick="operador('-');"><br><br>
+    <input type="button" value="*" id="por" onclick="operador('*');">
+    <input type="button" value="/" id="dividido" onclick="operador('/');">
+    <input type="button" value="=" id="igual" onclick="calcularResultado();"><br><br>
+    <input type="text" id="t">
+    <script type="text/javascript">
+        function numero(numero) {
+            document.getElementById('t').value += numero;
+        }
+
+        function operador(operador) {
+            var campoTexto = document.getElementById('t');
+            var ultimoCaracter = campoTexto.value.charAt(campoTexto.value.length - 1);
+            
+            // Verificar si el último carácter es un signo matemático y reemplazarlo si es necesario.
+            if (ultimoCaracter === '+' || ultimoCaracter === '-' || ultimoCaracter === '*' || ultimoCaracter === '/') {
+                campoTexto.value = campoTexto.value.slice(0, -1); // Eliminar el último carácter
+            }
+
+            campoTexto.value += operador;
+        }
+
+        function calcularResultado() {
+            try {
+                document.getElementById('t').value = eval(document.getElementById('t').value);
+            } catch (error) {
+                document.getElementById('t').value = 'Error';
+            }
+        }
+    </script>
+</div>
+</body>
+</html>
